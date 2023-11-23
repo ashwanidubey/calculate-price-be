@@ -5,11 +5,9 @@ const mongoURI= process.env.MONGO_URI
 
 
 const connectToMongo = async ()=>{
-   mongoose.connect(mongoURI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      serverSelectionTimeoutMS: 5000, // Timeout for server selection
-    }).then(() => console.log('mongo Connected to server'));
+   mongoose.connect(mongoURI,
+      { autoIndex: false } 
+    ).then(() => console.log('mongo Connected to server'));
    
 }
 
