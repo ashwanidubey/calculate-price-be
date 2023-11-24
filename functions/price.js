@@ -21,7 +21,7 @@ function calculateWaitingCharges(waitingRate, waitingTimeInitial, waitingTime) {
     if (distance <= DNBDistance+DAPK) {
       return 0;
     } else {
-      return (DNBDistance+DAPK-distance)*DAPR;
+      return (distance-DNBDistance-DAPK)*DAPR;
     }
   }  
 const calculatePrice=(data,config)=>{
